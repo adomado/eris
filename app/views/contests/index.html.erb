@@ -1,0 +1,59 @@
+           
+        
+    <h2>Products Categories Settings</h2> 
+                    
+                    
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit" border="0">
+    <thead>
+    <tr>
+      <th scope="col" class="rounded-company"></th>
+      <th scope="col" class="rounded">Name</th>
+      <th scope="col" class="rounded">Start date</th>
+      <th scope="col" class="rounded">End date</th>
+      <th scope="col" class="rounded">Is active</th>
+      <th scope="col" class="rounded">Last result on</th>
+      <th scope="col" class="rounded">Show</th>
+      <th scope="col" class="rounded">Status</th>
+      <th scope="col" class="rounded-q4">Delete</th>
+    </tr>
+  </thead>
+       <tfoot>
+    <tr>
+	    <td colspan="8" class="rounded-foot-left"><em> contests list .</em></td>
+	    <td class="rounded-foot-right">&nbsp;</td>
+
+    </tr>
+  </tfoot> 
+    <tbody>
+     <% @contests.each do |contest| %>
+  <% codes = contest.contest_codes.collect {|c| c.code} %>
+  
+  <tr>
+    <td><input type="checkbox" name="" /></td>
+    <td><%=h contest.name %></td>
+    <td><%=h contest.start_date %></td>
+    <td><%=h contest.end_date %></td>
+    <td><%=h contest.is_active %></td>
+    <td><%=h contest.last_result_on %></td>
+    <td align="center"><%= link_to image_tag("user_edit.png"), contest %> </td>
+    <td align="center"><% if(contest.is_active)  %>
+      <%= link_to image_tag("deactivated.gif"), deactivate_contest_path(contest), :method => :put %>
+    <% else %>
+      <%= link_to image_tag("right.png"), activate_contest_path(contest), :method => :put %>
+    <% end  %></td>
+    <td align="center"><%= link_to image_tag("trash.png"), contest, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+
+<% end %>   
+    </tbody>
+</table>
+
+	 <a href="<%= new_contest_path %>" class="bt_green"><span class="bt_green_lft"></span><strong>Add new contest</strong><span class="bt_green_r"></span></a>
+    
+ 
+     
+     
+        <%= will_paginate @posts %>
+
+      
+     

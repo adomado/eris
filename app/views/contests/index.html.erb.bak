@@ -1,0 +1,32 @@
+<h1>Listing contests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Result interval</th>
+    <th>Winners per result</th>
+    <th>Is active</th>
+    <th>Last result on</th>
+  </tr>
+
+<% @contests.each do |contest| %>
+  <tr>
+    <td><%=h contest.name %></td>
+    <td><%=h contest.start_date %></td>
+    <td><%=h contest.end_date %></td>
+    <td><%=h contest.result_interval %></td>
+    <td><%=h contest.winners_per_result %></td>
+    <td><%=h contest.is_active %></td>
+    <td><%=h contest.last_result_on %></td>
+    <td><%= link_to 'Show', contest %></td>
+    <td><%= link_to 'Edit', edit_contest_path(contest) %></td>
+    <td><%= link_to 'Destroy', contest, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New contest', new_contest_path %>

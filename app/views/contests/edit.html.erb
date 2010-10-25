@@ -1,0 +1,46 @@
+<h1>Editing contest</h1>
+
+<% form_for(@contest) do |f| %>
+  //<%= f.error_messages %>
+  <%= error_messages_for :object => [@contest] %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </p>
+  <p>
+    <%= f.label :end_date %><br />
+    <%= f.date_select :end_date %>
+  </p>
+  <p>
+    <%= f.label :result_interval %><br />
+    <%= f.text_field :result_interval %>
+  </p>
+  <p>
+    <%= f.label :winners_per_result %><br />
+    <%= f.text_field :winners_per_result %>
+  </p>
+  <p>
+    <%= f.label :is_active %><br />
+    <%= f.check_box :is_active %>
+  </p>
+
+  
+  <% codes = @contest_code.collect {|c| c.code} %>
+
+  <p>
+   <%=h codes.join(", ") %>
+  </p>
+
+
+  
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @contest %> |
+<%= link_to 'Back', contests_path %>

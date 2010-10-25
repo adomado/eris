@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Contests: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'style', 'niceforms-default', 'campaign/datePicker', 'campaign/demo'%>
+<!--  <%= javascript_include_tag "clockp","clockh", "jquery.min","ddaccordion", "niceforms", "jconfirmaction.jquery" %> -->
+<!-- <%= javascript_include_tag "jquery-ui-1.8.5.custom.min", "jquery-1.4.2.min" %> -->
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag 'campaign/jquery.datePicker', 'campaign/date'%>
+<script type="text/javascript" charset="utf-8">
+            $(function()
+            {
+				$('.date-pick').datePicker({autoFocusNextInput: true});
+            });
+		</script>
+
+</head>
+<body>
+  <div id="main_container">
+    <div class="header">
+      <div class="logo"><a href="#"><img src="http://alpha.adomado.com/images/branding/adomado_logo_white.png" alt="" title="" border="0" /></a></div>
+      <div class="right_header">Welcome Admin, <a href="http://www.adomado.com">Visit site</a> 
+      | <a href="http://mail.adomado.com" class="messages"> Messages</a> 
+      | <a href="/auth/logout" class="logout">Logout</a>
+      </div>
+      <div id="clock_a"></div>
+    </div>
+    <div class="main_content">
+      <div class="menu"> &nbsp; </div>
+      <div class="center_content">  
+        <div class="left_content">
+          <div class="sidebarmenu">
+            <a class="menuitem" href="">User Reference</a>
+            <a class="menuitem" href="">Blue button</a>
+            <a class="menuitem_green" href="">Green button</a>
+            <a class="menuitem_red" href="">Red button</a>
+          </div>
+        </div>  
+
+        <div class="right_content"> 
+        <% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div> <% end%>  
+<% flash[:notice] = nil %>
+        <%= yield%> </div>
+      </div>   <!--end of center content -->               
+      <div class="clear"></div>
+    </div> <!--end of main content-->
+
+    <div class="footer">
+      <div class="left_footer">AdoMado campaign admin panel</div>
+      <div class="right_footer"></div>
+    </div>
+  </div>		
+</body>
+</html>

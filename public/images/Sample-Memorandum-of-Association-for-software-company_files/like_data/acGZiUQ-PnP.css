@@ -1,0 +1,42 @@
+/*
+HTTP Host: static.ak.fbcdn.net
+Generated: October 5th 2010 9:03:40 AM PDT
+Machine: 10.138.16.182
+*/
+
+.uiTooltip{position:relative;*position:static;_zoom:1}
+.uiTooltip:active,
+.uiTooltip:focus,
+.uiTooltip:hover{outline:none;*position:relative;text-decoration:none;z-index:100}
+.uiTooltipWrap{display:none}
+.uiTooltipWrap:hover{visibility:hidden}
+.uiTooltipText{background-color:#282828;color:#fff !important;display:block;font-size:11px;line-height:14px;padding:4px 8px;white-space:nowrap}
+.uiTooltip:active .uiTooltipWrap,
+.uiTooltip:focus .uiTooltipWrap,
+.uiTooltip:hover .uiTooltipWrap{background:url(http://static.ak.fbcdn.net/rsrc.php/z1/r/uVR6w3wRHEJ.gif) left bottom no-repeat;bottom:100%;display:block;left:0;padding:0 0 4px;position:absolute}
+.uiTooltip:active .center,
+.uiTooltip:focus .center,
+.uiTooltip:hover .center{left:50%;margin-left:-10px;padding-left:10px}
+.uiTooltip .center .uiTooltipText{left:-50%;*margin-top:-1px;*padding-top:5px;position:relative}
+.uiTooltip .centerbottom .uiTooltipText{margin-left:18px}
+.uiTooltip:active .right,
+.uiTooltip:focus .right,
+.uiTooltip:hover .right{background-position:right bottom;left:auto;right:0}
+.uiTooltip:active .middle,
+.uiTooltip:focus .middle,
+.uiTooltip:hover .middle{background-image:url(http://static.ak.fbcdn.net/rsrc.php/zR/r/kPCE0g_tKJs.gif);background-position:right top;left:auto;margin:-4px 4px 0 0;right:100%;padding:4px;top:50%}
+.uiTooltip .middle .uiTooltipText{margin-top:-10px;*position:relative}
+.uiTooltip:active .rightmiddle,
+.uiTooltip:focus .rightmiddle,
+.uiTooltip:hover .rightmiddle{background-image:url(http://static.ak.fbcdn.net/rsrc.php/zY/r/_ZWZupdaAgS.gif);background-position:left top;left:100%;margin:-4px 0 0 4px;right:auto}
+.uiTooltip:active .bottom,
+.uiTooltip:focus .bottom,
+.uiTooltip:hover .bottom{background-image:url(http://static.ak.fbcdn.net/rsrc.php/zX/r/k2R_CZuPy2I.png);background-position:left top;bottom:auto;padding:4px 0 0;top:100%}
+.uiTooltip:active .rightbottom,
+.uiTooltip:focus .rightbottom,
+.uiTooltip:hover .rightbottom{background-position:right top}
+.openToggler > .uiTooltip:active .uiTooltipWrap,
+.openToggler > .uiTooltip:focus .uiTooltipWrap,
+.openToggler > .uiTooltip:hover .uiTooltipWrap{display:none}
+
+#bootloader_css_ui_xhp_link_tooltip_tooltip_link_css { height: 42px; }

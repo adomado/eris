@@ -1,0 +1,20 @@
+== Welcome to Eris
+
+  This project is for contest compaigning for adomado.
+  By using this application admin can create contest. And admin has to define contast start date, contast end date,
+  number of winners per day etc.
+  
+== Description Applications
+  
+  This appilcations are divided into different modules.
+  
+Module 1: User has to login with Admin credentials. After login admin can able to use this application.
+
+Module 2: In this module admin gets UI for creating contest and feed contest related informations.
+          Admin can also activate, deactivate and remove contest from admin panel.
+          
+Module 3: This is an automated module where system pick winners randomaly and send conformation emails to
+          user. User has to authenticate himself to redem his coupon code.
+ 
+
+

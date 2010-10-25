@@ -1,0 +1,13 @@
+Factory.define :contests do |a|
+  a.name                "free sms"
+  a.start_date          "2010-10-15"
+  a.end_date            "2010-10-26"
+  a.result_interval     3
+  a.winners_per_result  2
+  a.is_active           true 
+#  a.code                "aa,bb,cc,dd,ee,ff"
+end
+
+#Factory.define :code do |c|
+#  code "aa,bb,cc"
+#end  

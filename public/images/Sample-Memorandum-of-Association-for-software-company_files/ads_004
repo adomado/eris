@@ -1,0 +1,75 @@
+{ 
+ 
+var google_ads = new Array(); 
+var google_ad; 
+var google_radlinks = new Array(); 
+var google_radlink; 
+var google_info = new Object(); 
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=BNLU3vr-1TITULMKTcN7MlbEMu_SooQHF4InuEMCNtwHwunkQARgJINWqnBcoBTgAUIzskIYFYOXC5IOkDrIBD3d3dy5kb2NzdG9jLmNvbboBCjE2MHg2MDBfanPIAQHaAVpodHRwOi8vd3d3LmRvY3N0b2MuY29tL2RvY3MvMTM5OTc2OTAvU2FtcGxlLU1lbW9yYW5kdW0tb2YtQXNzb2NpYXRpb24tZm9yLXNvZnR3YXJlLWNvbXBhbnmAAgGpAupGe1KhS4E-qAMB6AP4CegDDOgDB-gDtQXoA6IG9QMCAAAE&amp;num=9&amp;sig=AGiWqtz43CdhJ5Q7_Y8LXfx2hayC7HJYvw&amp;client=ca-pub-0150682605382365&amp;adurl=http://adamshk.com/startup.htm"; 
+google_ad.visible_url = "www.adamshk.com"; 
+google_ad.line1 = "Incorporate HK Company"; 
+google_ad.line2 = "Limited Company, secretary service."; 
+google_ad.line3 = "No need to come HK.One week only!"; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=Bs2Z4vr-1TITULMKTcN7MlbEM56LQzAGDg9f1DsCNtwGQsAoQAhgKINWqnBcoBTgAUNOywsP6_____wFg5cLkg6QOsgEPd3d3LmRvY3N0b2MuY29tugEKMTYweDYwMF9qc8gBAdoBWmh0dHA6Ly93d3cuZG9jc3RvYy5jb20vZG9jcy8xMzk5NzY5MC9TYW1wbGUtTWVtb3JhbmR1bS1vZi1Bc3NvY2lhdGlvbi1mb3Itc29mdHdhcmUtY29tcGFueYACAagDAegD-AnoAwzoAwfoA7UF6AOiBvUDAgAABA&amp;num=10&amp;sig=AGiWqtzDhSgSJp6Hnpsgvv9A0p6ddqtfCg&amp;client=ca-pub-0150682605382365&amp;adurl=http://www.bulgarico.com"; 
+google_ad.visible_url = "www.bulgarico.com"; 
+google_ad.line1 = "Register a Company in BG"; 
+google_ad.line2 = "Company registration in Bulgaria,"; 
+google_ad.line3 = "accounting and tax optimization."; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 3; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=Bf03wvr-1TITULMKTcN7MlbEMqcyp7QGJnfKdFsCNtwGwsuECEAMYCyDVqpwXKAU4AFDLs5S8-v____8BYOXC5IOkDqAB5a_x9gOyAQ93d3cuZG9jc3RvYy5jb226AQoxNjB4NjAwX2pzyAEB2gFaaHR0cDovL3d3dy5kb2NzdG9jLmNvbS9kb2NzLzEzOTk3NjkwL1NhbXBsZS1NZW1vcmFuZHVtLW9mLUFzc29jaWF0aW9uLWZvci1zb2Z0d2FyZS1jb21wYW55gAIBqQLblolNHSNYPsgC1fX_DqgDAegD-AnoAwzoAwfoA7UF6AOiBvUDAgAABA&amp;num=11&amp;sig=AGiWqtzZgpEPnLOV5jXqAHHMkscQ--ORtA&amp;client=ca-pub-0150682605382365&amp;adurl=http://www.niit.com/sites/Edgeineers/Pages/alliances.aspx%3Fsiteid%3Dgoogle%26adunit%3Dtext%26technology%3DGeneric"; 
+google_ad.visible_url = "NIIT.com/IT-Course/Apply"; 
+google_ad.line1 = "Are You a Fresher?"; 
+google_ad.line2 = "Join Placement Oriented 4 Month IT"; 
+google_ad.line3 = "Course Designed for Fresh Grads"; 
+google_ad.regionname = ""; 
+google_ads[2] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 4; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=BGCvlvr-1TITULMKTcN7MlbEM9e3K3AHNn5aeFsCNtwHA2fEBEAQYDCDVqpwXKAU4AFCP_sWGBmDlwuSDpA6gAfPn9PIDsgEPd3d3LmRvY3N0b2MuY29tugEKMTYweDYwMF9qc8gBAdoBWmh0dHA6Ly93d3cuZG9jc3RvYy5jb20vZG9jcy8xMzk5NzY5MC9TYW1wbGUtTWVtb3JhbmR1bS1vZi1Bc3NvY2lhdGlvbi1mb3Itc29mdHdhcmUtY29tcGFueakC25aJTR0jWD7IAt3GzxKoAwHoA_gJ6AMM6AMH6AO1BegDogb1AwIAAAQ&amp;num=12&amp;sig=AGiWqty1sjsRmvaN8Fq7pItSgXRIoNI8GQ&amp;client=ca-pub-0150682605382365&amp;adurl=http://tracking-in.sokrati.com/click%3Fclient_id%3D60%26tag%3Dtim60-0225-138090%26redirect_url%3Dhttp%253A%252F%252Fwww.timesjobs.com%252Fcandidate%252Fpost_resume_stage1.html%253Fsiteparams%253D3p9909%2526utm_source%253Dgoogle%2526utm_medium%253Dcpc%2526utm_campaign%253Dsearch"; 
+google_ad.visible_url = "TimesJobs.com"; 
+google_ad.line1 = "2010 Fresher Jobs"; 
+google_ad.line2 = "Apply to Over 2,00,000 High Paying"; 
+google_ad.line3 = "Jobs. Register Free Now!"; 
+google_ad.regionname = ""; 
+google_ads[3] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 5; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=l&amp;ai=BYNIJvr-1TITULMKTcN7MlbEM7bWl5AH9sOTnFsCNtwGA8KIEEAUYDSDVqpwXKAU4AFDL0LH7AWDlwuSDpA6gAbOa1ecDsgEPd3d3LmRvY3N0b2MuY29tugEKMTYweDYwMF9qc8gBAdoBWmh0dHA6Ly93d3cuZG9jc3RvYy5jb20vZG9jcy8xMzk5NzY5MC9TYW1wbGUtTWVtb3JhbmR1bS1vZi1Bc3NvY2lhdGlvbi1mb3Itc29mdHdhcmUtY29tcGFueakC25aJTR0jWD7IArXeuhSoAwHoA_gJ6AMM6AMH6AO1BegDogb1AwIAAAQ&amp;num=13&amp;sig=AGiWqty2qSK73Ob14B4MD8t7k3-lO0NUgA&amp;client=ca-pub-0150682605382365&amp;adurl=http://program.niitimperia.com/CPMSD/index.asp%3FsiteId%3DGoogleC%26adUnit%3DCPMSD%2B-SD-%2B-C"; 
+google_ad.visible_url = "www.niitimperia.com"; 
+google_ad.line1 = "9 Month Certificate Prog"; 
+google_ad.line2 = "in Mgmt of Software Development"; 
+google_ad.line3 = "From IIM-C For 2+Yrs Professionals."; 
+google_ad.regionname = ""; 
+google_ads[4] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.docstoc.com/docs/13997690/Sample-Memorandum-of-Association-for-software-company%26hl%3Den%26client%3Dca-pub-0150682605382365%26adU%3Dwww.adamshk.com%26adT%3DIncorporate%2BHK%2BCompany%26adU%3Dwww.bulgarico.com%26adT%3DRegister%2Ba%2BCompany%2Bin%2BBG%26adU%3DNIIT.com/IT-Course/Apply%26adT%3DAre%2BYou%2Ba%2BFresher%253F%26adU%3DTimesJobs.com%26adT%3D2010%2BFresher%2BJobs%26adU%3Dwww.niitimperia.com%26adT%3D9%2BMonth%2BCertificate%2BProg%26gl%3DIN\x26usg\x3dAFQjCNEXaqUbYn_7C-5FB2boqHJ4i16p5g"; 
+if (window.google_ad_request_done) { 
+google_ad_request_done(google_ads); 
+} 
+if (window.google_radlink_request_done) { 
+google_radlink_request_done(google_radlinks); 
+} 
+}

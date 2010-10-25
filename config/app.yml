@@ -1,0 +1,4 @@
+:contest:
+  :database: "earth_development"
+  :table: "users"
+  :updated_date: Date.today - 15.days

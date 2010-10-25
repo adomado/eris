@@ -1,0 +1,52 @@
+<h2> Show </h2>
+<fieldset>
+  <dl>
+    <dt1>Name:</dt1>
+    <dt1><%=h @contest.name %></dt1>
+  </dl>  
+
+
+<dl>
+  <dt1>Start date:</dt1>
+  <dt1><%=h @contest.start_date %></dt1>
+</dl>
+
+<dl>
+  <dt1>End date:</dt1>
+  <dt1><%=h @contest.end_date %></dt1>
+</dl>
+
+<dl>
+  <dt1>Result interval:</dt1>
+  <dt1><%=h @contest.result_interval %></dt1>
+</dl>
+
+<dl>
+  <dt1>Winners per result:</dt1>
+  <dt1><%=h @contest.winners_per_result %></dt1>
+</dl>
+<dl>
+  <dt1>Code expires in:</dt1>
+  <dt1><%=h @contest.code_expires_in %></dt1>
+</dl>
+
+<dl>
+  <dt1>Is active:</dt1>
+  <dt1><%=h @contest.is_active %></dt1>
+</dl>
+
+<dl>
+  <dt1>Last result on:</dt1>
+  <dt1><%=h @contest.last_result_on %></dt1>
+</dl>
+
+<dl>
+  <dt1>Contest Codes:</dt1>
+  <% codes = @contest.contest_codes.collect {|c| c.code} %>
+  <dt1><%=h codes.join(", ") %></dt1>
+  
+</dl>
+
+</fieldset>
+ <a href="/contests" class="bt_green"><span class="bt_green_lft"></span><strong>Back</strong><span class="bt_green_r"></span></a>
+

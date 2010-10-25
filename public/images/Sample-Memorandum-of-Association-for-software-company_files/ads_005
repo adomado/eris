@@ -1,0 +1,15 @@
+{ 
+ 
+var google_ads = new Array(); 
+var google_ad; 
+var google_radlinks = new Array(); 
+var google_radlink; 
+var google_info = new Object(); 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.docstoc.com/docs/13997690/Sample-Memorandum-of-Association-for-software-company%26hl%3Did%26client%3Dca-pub-0150682605382365%26gl%3DIN\x26usg\x3dAFQjCNEpUhlm_qTn-_1i7VVdu1y1dU73uA"; 
+if (window.google_ad_request_done) { 
+google_ad_request_done(google_ads); 
+} 
+if (window.google_radlink_request_done) { 
+google_radlink_request_done(google_radlinks); 
+} 
+}

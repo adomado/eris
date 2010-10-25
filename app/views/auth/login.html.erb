@@ -1,0 +1,34 @@
+ <div class="login_form">
+         
+         <h3>Login</h3>
+         
+         
+         
+         
+         <% form_tag do %>
+                <fieldset>
+                    <dl>
+                        <dt><label for="email">Email:</label></dt>
+                        <dd><%= text_field_tag :email, params[:email] %></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="password">Password:</label></dt>
+                        <dd><%= password_field_tag :password, params[:password] %></dd>
+                    </dl>
+                    
+                    <dl>
+                        <dt><label></label></dt>
+                        <dd>
+                    <input type="checkbox" name="interests[]" id="" value="" /><label class="check_label">Remember me</label>
+                        </dd>
+                    </dl>
+                    
+                     <dl class="submit">
+                    <%= submit_tag "Login" %>
+                     </dl>
+                    
+                </fieldset>
+                <% end %>  
+                <a href="#" class="forgot_pass">Forgot password</a> 
+         
+         </div>  

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  c_id: 1
+  code: MyString
+  claim_id: MyString
+  is_valid: false
+
+two:
+  c_id: 1
+  code: MyString
+  claim_id: MyString
+  is_valid: false
