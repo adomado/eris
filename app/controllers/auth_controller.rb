@@ -9,10 +9,8 @@ class AuthController < ApplicationController
         session[:user_id] = true
         session[:email] = params[:email]
         if session[:pre_uri]
-#          redirect_to(:action => "index" , :controller => 'contests')
           redirect_to(session[:pre_uri])
         else  
-#        redirect_to( :action => "show" , :id => session[:code_id])
           redirect_to(:action => "index" , :controller => 'contests')
         end
       else
