@@ -57,7 +57,7 @@ class ContestsController < ApplicationController
       if contest_val == true
         cc_code_saved = ContestCode.create_new_csv(@contest.id, @contest_code)
         if cc_code_saved
-          flash[:notice] = 'Contest successfully created.'
+          flash[:success] = 'Contest successfully created.'
           redirect_to(@contest)
         else
           flash[:notice] = 'Contest code not created successfully.'

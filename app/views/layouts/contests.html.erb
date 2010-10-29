@@ -3,26 +3,60 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Contests: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'style', 'niceforms-default', 'campaign/datePicker', 'campaign/demo'%>
+  <%= stylesheet_link_tag 'style', 'niceforms-default', 'campaign/datePicker', 'campaign/demo', 'campaign/jquery.tooltip' %>
 <!--  <%= javascript_include_tag "clockp","clockh", "jquery.min","ddaccordion", "niceforms", "jconfirmaction.jquery" %> -->
 <!-- <%= javascript_include_tag "jquery-ui-1.8.5.custom.min", "jquery-1.4.2.min" %> -->
 <%= javascript_include_tag :defaults %>
-<%= javascript_include_tag 'campaign/jquery.datePicker', 'campaign/date'%>
+<%= javascript_include_tag 'campaign/jquery.datePicker', 'campaign/date', 'campaign/jquery.tooltip' %>
+
 <script type="text/javascript" charset="utf-8">
-            $(function()
-            {
-				$('.date-pick').datePicker({autoFocusNextInput: true});
-            });
-		</script>
+  function parseDate(str) {
+    var ymd = str.split('-')
+    return new Date(ymd[0], ymd[1]-1, ymd[2]);
+  }
+
+  function daydiff(first, second) {
+    return (second-first)/(1000*60*60*24)
+  }
+        
+$(function(){
+
+  $('.date-pick').datePicker();
+  $('#set1 *').tooltip();
+
+
+
+  $('#contest_start_date').blur(function() {
+    var start=$(this).val();
+    $('#contest_end_date').val(start);
+  });
+
+  $('#contest_end_date').blur(function() {
+    var start = $('#contest_start_date').val();
+    var end = $('#contest_end_date').val();
+    var diff_days = daydiff(parseDate(start), parseDate(end))
+    if (diff_days < 0) {$('#number_of_day').html('<font color="green">End date should be greater than start date</font>');}
+    else {$('#number_of_day').html('');}
+  });
+
+  $('#contest_code_expires_in').blur(function() {
+    var w_p_r = $('#contest_winners_per_result').val();
+    var result_interval = $('#contest_result_interval').val();
+    var diff_days = daydiff(parseDate($('#contest_start_date').val()), parseDate($('#contest_end_date').val()))
+    var number_of_events = Math.ceil((diff_days) / result_interval) 
+    var contest_code_number = number_of_events * w_p_r
+    $('#number_of_codes').html('<dl><dt></dt><dt>'+ contest_code_number +' contest code required. </dt></dl>');
+  });
+});
+</script>
 
 </head>
 <body>
   <div id="main_container">
     <div class="header">
-      <div class="logo"><a href="#"><img src="http://alpha.adomado.com/images/branding/adomado_logo_white.png" alt="" title="" border="0" /></a></div>
-      <div class="right_header">Welcome Admin, <a href="http://www.adomado.com">Visit site</a> 
-      | <a href="http://mail.adomado.com" class="messages"> Messages</a> 
-      | <a href="/auth/logout" class="logout">Logout</a>
+      <div class="logo"><a href="#"><img src="http://asset3.adomado.com/images/branding/adomado_logo_white.png" alt="" title="" border="0" /></a></div>
+      <div class="right_header">Welcome Admin, <a href="http://www.adomado.com">Visit site</a>  
+      |<a href="/auth/logout" class="logout">Logout</a>
       </div>
       <div id="clock_a"></div>
     </div>
@@ -31,16 +65,25 @@
       <div class="center_content">  
         <div class="left_content">
           <div class="sidebarmenu">
-            <a class="menuitem" href="">User Reference</a>
-            <a class="menuitem" href="">Blue button</a>
-            <a class="menuitem_green" href="">Green button</a>
-            <a class="menuitem_red" href="">Red button</a>
+            <a class="menuitem" href="/contests/">Home</a>
+            <a class="menuitem" href="/contests/new">Add  New</a>
+            <a class="menuitem" href="/auth/logout">Logout</a>
           </div>
-        </div>  
+          <br /><br /><br />
+          <div class="sidebarmenu">
+            <h2>Reports</h2>
+            <a class="menuitem" href="#"></a>
+            <a class="menuitem" href="#"></a>
+            <a class="menuitem" href="#"></a>
+          </div>
+        </div>
+        
 
         <div class="right_content"> 
         <% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div> <% end%>  
 <% flash[:notice] = nil %>
+        <% if flash[:success] %><div class="valid_box"><%= flash[:success] %></div> <% end%>  
+<% flash[:success] = nil %>
         <%= yield%> </div>
       </div>   <!--end of center content -->               
       <div class="clear"></div>

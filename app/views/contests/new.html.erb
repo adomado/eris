@@ -1,61 +1,63 @@
+<p style="color: sienna; margin-left: 430px;"> * For help hover over text area.</p>
 <h2>New contest</h2>
 <% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div> <% end%>  
 <% flash[:notice] = nil %>
 <% form_for(@contest) do |f| %>
   <%= error_messages_for :object => [@contest, @contest_code] %>
- <fieldset>
+ <fieldset id="set1">
     <dl>
       <dt><%= f.label :name %></dt>
-      <dd><%= f.text_field :name %></dd>
+      <dd><%= f.text_field :name, :title => "Contest name." %></dd>
     </dl>
-    <dl>
+   <dl>
       <dt><%= f.label :start_date %></dt>
-      <dt><%= f.text_field :start_date, :class => "date-pick" %></dt>
+      <dt><%= f.text_field :start_date, :class => "date-pick",:title => "Contest beginning date." %></dt>
       
     </dl>
     <dl>
       <dt><%= f.label :end_date %></dt>
-      <dt><%= f.text_field :end_date, :class => "date-pick" %></dt>
+      <dt><%= f.text_field :end_date, :class => "date-pick", :title => "Contest end date. It should be greater than start date." %></dt>
       
     </dl>
-  
+    <div id="number_of_day"></div>
+    
     <dl>
       <dt><%= f.label :result_interval %></dt>
-      <dt><%= f.text_field :result_interval %></dt>
+      <dt><%= f.text_field :result_interval, :title => "Number of days when winners will declared." %></dt>
     </dl>
 
      <dl>
       <dt><%= f.label :winners_per_result %></dt>
-      <dt><%= f.text_field :winners_per_result %></dt>
+      <dt><%= f.text_field :winners_per_result, :title => "Number of winners per contest result." %></dt>
     </dl>
-
+    
      <dl>
       <dt><%= f.label :code_expires_in %></dt>
-      <dt><%= f.text_field :code_expires_in %></dt>
+      <dt><%= f.text_field :code_expires_in, :title => "Number in days, Code will expire if user do not use code within specific number of days." %></dt>
     </dl>
 
      <dl>
       <dt><%= f.label :is_active %></dt>
-      <dt1><%= f.check_box :is_active %></dt1>
+      <dt1><%= f.check_box :is_active, :selected=> true  %></dt1>
     </dl>
-
+    <div id="number_of_codes"></div>
     <% fields_for :contest_code do |code| %>
   
       <dl>
         <dt><%= code.label :code %><br /></dt>
-        <dt><%= code.text_area :code, :size => "35X20" %></dt>
+        <dt><%= code.text_area :code, :size => "35X20", :title => "Multiple code(s) are comma seperated eg: aa,bb,cc,dd." %></dt>
       </dl>
   
     <% end %>
 
-  <dl><dt2><%= f.submit 'Create' %></dt2></dl>
+  <dl><dt2>
+  <%= f.submit 'Create' %>
+  </dt2></dl>
   
   
   
 </fieldset>
 
 <% end %>
-  <a href="/contests" class="bt_green"><span class="bt_green_lft"></span><strong>Back</strong><span class="bt_green_r"></span></a>
-
-
+  <a href="#" class="bt_green" onclick="document.new_contest.submit();"><span class="bt_green_lft"></span><strong>Back</strong><span class="bt_green_r"></span></a>
 

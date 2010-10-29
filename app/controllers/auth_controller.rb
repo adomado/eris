@@ -11,7 +11,7 @@ class AuthController < ApplicationController
         if session[:pre_uri]
           redirect_to(session[:pre_uri])
         else  
-          redirect_to(:action => "index" , :controller => 'contests')
+          redirect_to(:action => "index", :controller => 'contests')
         end
       else
         flash.now[:notice] = "Invalid user/password combination"
