@@ -20,23 +20,23 @@
   <div id="main_container">
     <div class="header">
       <div class="logo"><a href="#"><img src="http://asset3.adomado.com/images/branding/adomado_logo_white.png" alt="" title="" border="0" /></a></div>
-      <div class="right_header"> <a href="http://www.adomado.com">Visit site</a> 
-      
+      <div class="right_header"> <a href="http://www.adomado.com">Visit site</a>
+
       </div>
       <div id="clock_a"></div>
     </div>
     <div class="main_content">
       <div class="menu"> &nbsp; </div>
-      <div class="center_content">  
-        
+      <div class="center_content">
+
         <div class="left_content1">
-          <% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div> <% end%>  
+          <% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div> <% end%>
 <% flash[:notice] = nil %>
         </div>
-        <% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div> <% end%>  
+        <% if flash[:notice] %><div class="error_box"><%= flash[:notice] %></div> <% end%>
 <% flash[:notice] = nil %>
-        <%= yield%> 
-      </div>   <!--end of center content -->               
+        <%= yield%>
+      </div>   <!--end of center content -->
       <div class="clear"></div>
     </div> <!--end of main content-->
 
@@ -44,6 +44,6 @@
       <div class="left_footer">AdoMado campaign panel</div>
       <div class="right_footer"></div>
     </div>
-  </div>		
+  </div>
 </body>
 </html>
