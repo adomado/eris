@@ -1,7 +1,14 @@
 .login_form{
 width:600px;
 height:250px;
-background:url(images/login_bg.png) no-repeat center top;
+background:url(../images/login_bg.png) no-repeat center top;
+margin:20px 0 0 145px;
+float:left;
+padding:0px 0 0 0px;
+}
+.show_code{
+width:600px;
+height:50px;
 margin:20px 0 0 145px;
 float:left;
 padding:0px 0 0 0px;

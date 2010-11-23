@@ -1,6 +1,5 @@
 class ContestCodesController < ApplicationController
 
-  #layout "contest_codes"
   before_filter :require_login, :only => [:show] 
     
   def show
@@ -23,17 +22,13 @@ class ContestCodesController < ApplicationController
           @contest_code = nil
         end
       else
-        redirect_to(:action => 'error')
+        @contest_code = nil
       end
     else
       session[:pre_uri] = request.request_uri
       redirect_to(:controller => 'auth', :action => 'login')
     end 
  
-  end
-  
-  def error
-    
   end
   
       
