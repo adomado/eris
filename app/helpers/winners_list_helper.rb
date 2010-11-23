@@ -1,0 +1,2 @@
+module WinnersListHelper
+end
